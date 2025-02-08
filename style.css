@@ -1,0 +1,338 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0px;
+  background-color: #F9FAF5;
+  font-family: 'Montserrat', sans-serif;
+}
+
+root {
+  font-family: "Playfair", serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-family: "Montserrat", serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+a:hover {
+  color: #DA8027;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #DA8027;
+  text-decoration: underline;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 17px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair", serif;
+}
+
+h1 {
+  font-family: "Playfair", serif;
+  font-size: 32px;
+  font-weight: 600px;
+}
+
+/* Add style to buttons */
+button {
+  padding: 0.5rem;
+  font-size: 17px;
+  background-color: #DA8027;
+  border-radius: 1rem;
+  border-color: transparent;
+}
+
+img {
+  border-radius: 10px;
+}
+
+/* Adjust size logo */
+.logo {
+  max-width: 400px;
+  height: auto;
+}
+
+/* Style the navigation menu mobil*/
+.topnav {
+  overflow: hidden;
+  background-color: #BFC28A;
+  position: relative;
+}
+
+/* Hide the links inside the navigation menu (except for logo) */
+.topnav #myLinks {
+  display: none;
+}
+
+/* Style navigation menu links */
+.topnav a {
+  color: #1C1C1C;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+/* Style the hamburger menu icon */
+.topnav a.icon {
+  color: #1C1C1C;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+/* Add a orange background on hover */
+.topnav a:hover {
+  color: #DA8027;
+}
+
+/* Style the active link */
+.active {
+  background-color: #EFEEE2;
+  color: #1C1C1C;
+}
+
+/* Style desktop navigation menu make the links into blocks */
+/* Style navigation menu desktop */
+.nav {
+  display: flex;
+  float: left;
+  text-align: center;
+  align-items: center;
+}
+
+/* Style navigation menu links desktop */
+.nav a {
+  color: #1C1C1C;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 500;
+}
+
+.nav a:hover {
+  background-color: #EFEEE2;
+  color: #1C1C1C;
+}
+
+.nav a:active {
+  background-color: #EFEEE2;
+  color: #1C1C1C;
+}
+
+.intro-block {
+  display: grid;
+  margin: 1rem;
+  background-color: #BFC28A;
+  border-radius: 10px;
+}
+
+.intro-block img {
+  grid-template-columns: repeat(1, 1fr);
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+.intro-block h1 {
+  font-size: 52px;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* CSS text animation intro text*/
+@keyframes fadeInUp {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+  }
+}
+
+.fadeInUp-animation {
+  animation: 2s fadeInUp;
+}
+
+/* Style category link */
+.category-link {
+  text-transform: uppercase;
+  font-weight: 500px;
+}
+
+/* Style big news item */
+.big-news {
+  display: grid;
+  margin: 1rem;
+}
+
+.big-news-item {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  background-color: #F9FAF5;
+  align-items: center;
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.big-news-header {
+  padding: 2rem;
+}
+
+.big-news-image img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* Style other news items in columns */
+.news-columns {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 1rem;
+  margin: 1rem;
+}
+
+.column-image img {
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 2;
+}
+
+.column-item {
+  padding: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  background-color: #F9FAF5;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+.footer-text {
+  padding: 1rem;
+  margin-top: 1rem;
+  background-color: #DA8027;
+  color: #1C1C1C;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+
+  /* Styles for screens less than 768px wide */
+  .logo {
+    max-width: 250px;
+    height: auto;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .happy-globes {
+    display: none;
+  }
+
+  .intro-block h1 {
+    font-size: 36px;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .big-news-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .news-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 960px) {
+
+  .nav {
+    display: none;
+  }
+
+  .desktop-menu {
+    display: flex;
+  }
+
+  ul {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .happy-globes-mobile {
+    display: none;
+  }
+
+  .big-news-item {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .news-columns {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(2, 1fr);
+    text-align: center;
+    grid-gap: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 961px) {
+  .topnav {
+    display: none;
+  }
+
+  .happy-globes-mobile {
+    display: none;
+  }
+}
